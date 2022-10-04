@@ -1,0 +1,137 @@
+@import "@/assets/styles/_variables";
+
+.project {
+  &__list {
+    max-width: 768px !important;
+    margin: 30px auto 0;
+    overflow: auto;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 32px;
+    align-items: center;
+    background-color: $white;
+    border: 1px solid $gray5;
+    border-radius: 5px;
+    cursor: pointer;
+
+    @media screen and (max-width: 540px) {
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    &-wrapper {
+      &:last-child {
+        @media screen and (max-width: 540px) {
+          margin-bottom: 20px;
+        }
+      }
+      &:nth-last-child(n + 2) {
+        margin-bottom: 20px;
+      }
+    }
+
+    &__main-info {
+      display: flex;
+      align-items: center;
+      flex: 1 1 80%;
+
+      @media screen and (max-width: 540px) {
+        flex-direction: column;
+      }
+
+      &__image {
+        max-width: 50px;
+        margin-right: 20px;
+
+        @media screen and (max-width: 540px) {
+          margin-right: 0;
+          margin-bottom: 20px;
+        }
+      }
+
+      &__name {
+        font-weight: bold;
+        margin-right: 40px;
+
+        @media screen and (max-width: 540px) {
+          text-align: center;
+          margin-right: 0;
+        }
+      }
+    }
+
+    &__additional-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      @media screen and (max-width: 540px) {
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      &__status {
+        color: $green;
+        font-weight: bold;
+        margin-right: 30px;
+
+        @media screen and (max-width: 540px) {
+          margin-right: 0;
+        }
+      }
+
+      &__time {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        @media screen and (max-width: 540px) {
+          margin-bottom: 30px;
+        }
+
+        & div {
+          p:first-child {
+            width: 120px;
+          }
+          p:nth-child(2) {
+            font-weight: bold;
+          }
+          display: flex;
+        }
+      }
+    }
+  }
+
+  &__form{
+    &__wrapper {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      & input {
+        width: 100%;
+        border: 1px solid $gray2;
+        padding: 16px;
+        border-radius: 8px;
+        background: $white;
+        font-size: 18px;
+        line-height: 24px;
+        outline: none;
+        box-sizing: border-box;
+        transition: all 0.2s ease-in-out;
+
+        &:focus {
+          box-shadow: 0 3px 8px rgba(0, 0, 0, 0.21);
+        }
+        &::placeholder {
+          color: $gray3;
+        }
+      }
+    }
+  }
+}

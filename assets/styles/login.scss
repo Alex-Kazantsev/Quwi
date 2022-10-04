@@ -1,0 +1,86 @@
+@import "@/assets/styles/_variables";
+
+.login {
+  &__layout {
+    height: 100vh;
+
+    &__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px !important;
+
+      &__logo {
+        max-width: 20px;
+        max-height: 20px;
+      }
+
+      &-wrapper {
+        -webkit-box-shadow: 0 6px 6px 0 rgba(34, 60, 80, 0.2);
+        -moz-box-shadow: 0 6px 6px 0 rgba(34, 60, 80, 0.2);
+        box-shadow: 0 6px 6px 0 rgba(34, 60, 80, 0.2);
+        background-color: $white;
+      }
+    }
+
+    &__content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+    padding: 25px 40px 35px;
+    margin: 10px;
+    border-radius: 15px;
+    background-color: $white;
+    -webkit-box-shadow: 0 0 12px rgb(0 0 0 / 25%);
+    -moz-box-shadow: 0 0 12px rgb(0 0 0 / 25%);
+    box-shadow: 0 0 12px rgb(0 0 0 / 25%);
+
+    &__logo {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 40px;
+    }
+
+    &__field {
+      border: 1px solid $gray2;
+      padding: 16px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      background: $white;
+      font-size: 18px;
+      line-height: 24px;
+      outline: none;
+      transition: all 0.2s ease-in-out;
+
+      &:focus {
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.21);
+      }
+      &::placeholder {
+        color: $gray3;
+      }
+    }
+
+    &__btn {
+      margin-top: 10px;
+    }
+
+    &__forgot-password {
+      margin: 15px auto 0;
+    }
+
+    &__error {
+      margin-left: 4px;
+      color: red;
+      font-size: 14px;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+@import "@/assets/styles/variables";
+
+.link {
+  color: $gray;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+
+  &:hover, &:focus {
+    color: $gray4;
+  }
+
+  &-primary {
+    color: $blue;
+
+    &:hover, &:focus {
+      color: $blue2;
+    }
+  }
+}
